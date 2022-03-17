@@ -1,3 +1,3 @@
-FROM jenkins:lts-jdk11
-EXPOSE 8090
+FROM jenkins/jenkins:lts-jdk11
+EXPOSE 8080
 EXPOSE 50000

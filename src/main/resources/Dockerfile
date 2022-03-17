@@ -1,0 +1,1 @@
+FROM jenkins:lts-jdk11

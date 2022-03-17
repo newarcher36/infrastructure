@@ -6,7 +6,7 @@ version: 3
         context: .
         dockerfile: Dockerfile
       ports:
-        - 8080:8080
+        - 8090:8090
         - 50000:50000
       volumes:
         - jenkins_home:/var/jenkins_home

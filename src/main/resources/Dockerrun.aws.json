@@ -1,0 +1,11 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "newarcher/jenkins:lts-jdk11"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "8090"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ services:
   jenkins:
     image: newarcher/jenkins:lts-jdk11
     build:
-      context: .
+      context: ..
       dockerfile: Dockerfile
     ports:
       - 8080:8080

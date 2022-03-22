@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meteo-station-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: meteo-station
+  template:
+    metadata:
+      labels:
+        component: meteo-station
+    spec:
+      containers:
+        - name: meteo-station
+          image: newarcher/meteo-station
+          ports:
+            - containerPort: 8090

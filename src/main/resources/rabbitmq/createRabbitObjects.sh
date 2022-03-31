@@ -1,7 +1,7 @@
 #!/bin/bash
 
 createRabbitMQObjects() {
-  sleep 20
+  sleep 40
 
   echo "Declaring exchanges"
   rabbitmqadmin declare exchange --vhost=/ name=temperature_exchange type=direct

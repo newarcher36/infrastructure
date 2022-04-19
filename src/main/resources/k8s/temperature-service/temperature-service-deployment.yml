@@ -16,4 +16,4 @@ spec:
         - name: temperature-service
           image: newarcher/temperature-service
           ports:
-            - containerPort: 8090
+            - containerPort: 8091

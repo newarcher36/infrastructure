@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: temperature-service-cluster-ip-service
+spec:
+  type: ClusterIP
+  selector:
+    component: temperature-service
+  ports:
+    - port: 8091
+      targetPort: 8091

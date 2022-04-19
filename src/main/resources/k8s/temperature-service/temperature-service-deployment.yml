@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: temperature-service-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: temperature-service
+  template:
+    metadata:
+      labels:
+        component: temperature-service
+    spec:
+      containers:
+        - name: temperature-service
+          image: newarcher/temperature-service
+          ports:
+            - containerPort: 8090

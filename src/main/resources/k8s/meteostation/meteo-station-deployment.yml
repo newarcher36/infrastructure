@@ -17,3 +17,17 @@ spec:
           image: newarcher/meteo-station
           ports:
             - containerPort: 8090
+          env:
+            - name: PGUSER
+              value: postgres
+            - name: PGHOST
+              value: postgres-cluster-ip-service
+            - name: PGPORT
+              value: '5432'
+            - name: PGDATABAE
+              value: postgres
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pgpassowrd
+                  key: PGPASSWORD

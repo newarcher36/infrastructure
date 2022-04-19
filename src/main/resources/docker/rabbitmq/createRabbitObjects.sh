@@ -22,5 +22,5 @@ createRabbitMQObjects() {
 echo "Creating rabbitmq objects in deferred"
 createRabbitMQObjects &
 
-echo "Starting rabbitmq and setting to foreground..."
+echo "Starting rabbitmq and setting it up as foreground process"
 rabbitmq-server fg

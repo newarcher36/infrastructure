@@ -19,7 +19,7 @@ createRabbitMQObjects() {
   rabbitmqadmin --vhost=/ declare binding source=temperature_exchange destination_type="queue" destination="save-temperature" routing_key="save-temperature"
 }
 
-echo "Creating rabbitmq objects in deferred"
+echo "Creating rabbitmq objects in the background"
 createRabbitMQObjects &
 
 echo "Starting rabbitmq and setting it up as foreground process"

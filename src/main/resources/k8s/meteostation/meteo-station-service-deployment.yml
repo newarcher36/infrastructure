@@ -6,15 +6,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      component: meteo-station
+      component: meteo-station-service
   template:
     metadata:
       labels:
-        component: meteo-station
+        component: meteo-station-service
     spec:
       containers:
-        - name: meteo-station
-          image: newarcher/meteo-station
+        - name: meteo-station-service
+          image: newarcher/meteo-station-service:v1
           ports:
             - containerPort: 8090
           env:

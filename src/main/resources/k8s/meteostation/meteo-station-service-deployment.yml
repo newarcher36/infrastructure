@@ -18,6 +18,12 @@ spec:
           ports:
             - containerPort: 8090
           env:
+            - name: RABBITMQ_HOST
+              value: rabbitmq-cluster-ip-service
+            - name: RABBITMQ_PORT
+              value: '5672'
+            - name: RABBITMQ_ADMIN_PORT
+              value: '15672'
             - name: PGUSER
               value: postgres
             - name: PGHOST
